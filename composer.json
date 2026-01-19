@@ -1,0 +1,17 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "youcode/d-veloppement-d-une-application-web-mvc-avec-php",
+    "description": "mvc",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "makhfi03",
+            "email": "ghita.makhfi.21@gmail.com"
+        }
+    ],
+    "require": {}
+}
