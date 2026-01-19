@@ -1,1 +1,1 @@
-# D-veloppement-d-une-application-web-MVC-avec-PHP
+# Développement d’une application web e-commerce pour la vente de produits électroniques
