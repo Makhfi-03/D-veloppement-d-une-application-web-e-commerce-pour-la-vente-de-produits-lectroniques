@@ -50,12 +50,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($user && password_verify($password, $user->getPassword())) {
             session_start();
-            $_SESSION['id'] = $utilisateur->getId();
-            $_SESSION['name'] = $utilisateur->getName();
-            $_SESSION['role'] = $utilisateur->getRole();
-            $_SESSION['email'] = $utilisateur->getEmail();
+            $_SESSION['name'] = $user->getName();
+            $_SESSION['role'] = $user->getRole();
+            $_SESSION['email'] = $user->getEmail();
 
-            if($_SESSION['role'] === 'Admin'){
+            if($_SESSION['role'] === 'ADMIN'){
                 header('Location: /Admin');
             } else {
                 header('Location: /Client');

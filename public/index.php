@@ -34,7 +34,8 @@ switch ($uri) {
         break;
 
     case '/Admin':
-        require_once '../app/views/back/dashboardAdmin.php';
+        require_once __DIR__. '/../app/views/back/dashboardAdmin.php';
+        
         break;
 
     default:
