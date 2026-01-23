@@ -4,8 +4,6 @@ include '../app/models/User.php';
 include '../app/controllers/AuthController.php';
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
-var_dump($uri);
-
 switch ($uri) {
     case '/Accueil':
         echo 'this is home';
@@ -21,6 +19,11 @@ switch ($uri) {
         $user->Register();
         break;
 
+    case '/logout':
+        $user = new AuthController();
+        $user->logout();
+        break;
+
     case '/':
         require_once '../app/views/front/Accueil.php';
         break;
@@ -34,8 +37,13 @@ switch ($uri) {
         break;
 
     case '/Admin':
-        require_once __DIR__. '/../app/views/back/dashboardAdmin.php';
-        
+        session_start();
+        require_once __DIR__ . '/../app/views/back/dashboardAdmin.php';
+        break;
+
+    case '/Client':
+        session_start();
+        require_once __DIR__ . '/../app/views/back/dashboardClient.php';
         break;
 
     default:

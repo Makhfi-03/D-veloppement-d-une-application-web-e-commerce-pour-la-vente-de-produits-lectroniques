@@ -6,13 +6,13 @@
         <title>ElectroTech - High Tech E-commerce</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <title>Admin</title>
+    <title>Dashboard Admin</title>
 </head>
 <body>
     <div class="min-h-screen bg-slate-50 flex flex-col md:flex-row">
     <aside class="w-full md:w-64 bg-slate-900 text-slate-300 p-6">
         <div class="mb-10">
-            <span class="text-2xl font-black text-white italic">ADMIN.</span>
+            <span class="text-2xl font-black text-white italic"><?= $_SESSION['name'] ?? 'Admin' ?></span>
         </div>
         <nav class="space-y-4 text-sm">
             <a href="?view=products" class="flex items-center space-x-3 text-white bg-blue-600 p-3 rounded-xl">
@@ -27,6 +27,11 @@
             <a href="?view=users" class="flex items-center space-x-3 hover:text-white p-3 transition border-t border-slate-800 pt-6">
                 <i class="fa-solid fa-users"></i> <span>Utilisateurs</span>
             </a>
+            <div class="pt-10">
+                <a href="/logout" class="flex items-center space-x-3 text-red-500 hover:bg-red-50 p-3 rounded-xl transition font-medium">
+                    <i class="fa-solid fa-right-from-bracket"></i> <span>Déconnexion</span>
+                </a>
+            </div>
         </nav>
     </aside>
 
