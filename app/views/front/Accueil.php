@@ -18,6 +18,10 @@
             </div>
 
             <div class="flex items-center space-x-6">
+                <a href="cart.php" class="relative">
+                    <i class="fa-solid fa-cart-shopping text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center">1</span>
+                </a>
                 <a href="/auth/login" class="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-bold">Connexion</a>
                 <a href="/auth/register" class="bg-green-600 text-white px-5 py-2 rounded-lg text-sm font-bold">S'inscrire</a>
             </div>

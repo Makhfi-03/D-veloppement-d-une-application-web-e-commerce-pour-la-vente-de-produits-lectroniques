@@ -15,16 +15,16 @@
             <span class="text-2xl font-black text-white italic"><?= $_SESSION['name'] ?? 'Admin' ?></span>
         </div>
         <nav class="space-y-4 text-sm">
-            <a href="?view=products" class="flex items-center space-x-3 text-white bg-blue-600 p-3 rounded-xl">
+            <a href="/product" class="flex items-center space-x-3 text-white bg-blue-600 p-3 rounded-xl">
                 <i class="fa-solid fa-box"></i> <span>Produits</span>
             </a>
-            <a href="?view=categories" class="flex items-center space-x-3 hover:text-white p-3 transition">
+            <a href="/categorie" class="flex items-center space-x-3 hover:text-white p-3 transition">
                 <i class="fa-solid fa-tags"></i> <span>Catégories</span>
             </a>
-            <a href="?view=orders" class="flex items-center space-x-3 hover:text-white p-3 transition">
+            <a href="/commande" class="flex items-center space-x-3 hover:text-white p-3 transition">
                 <i class="fa-solid fa-receipt"></i> <span>Commandes</span>
             </a>
-            <a href="?view=users" class="flex items-center space-x-3 hover:text-white p-3 transition border-t border-slate-800 pt-6">
+            <a href="/utilisateur" class="flex items-center space-x-3 hover:text-white p-3 transition border-t border-slate-800 pt-6">
                 <i class="fa-solid fa-users"></i> <span>Utilisateurs</span>
             </a>
             <div class="pt-10">

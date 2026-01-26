@@ -39,7 +39,7 @@ class AuthController
 
     public function Login()
     {
-        $utilisateur = new User();
+        $user = new User();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $name = $_POST['name'];
             $password = $_POST['password'];
@@ -74,6 +74,7 @@ class AuthController
 
     public function logout()
     {
+        session_start();
         session_destroy();
         header('Location: /');
     }
